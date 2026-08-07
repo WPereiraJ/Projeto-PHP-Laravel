@@ -1,0 +1,38 @@
+/* --- ESTILO GLOBAL DO LAYOUT --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Cinza bem claro e moderno */
+    color: #333;
+}
+
+/* Navbar "Dark Modern" */
+.bg-dark-modern {
+    background: linear-gradient(to right, #2c3e50, #34495e); /* Azul escuro profissional */
+    border-bottom: 3px solid #00b09b; /* O toque verde do seu tema */
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Ajuste no container principal para centralizar melhor */
+.dashboard-container {
+    /* Não precisa mais de background aqui, pois o body já tem */
+    padding: 0; 
+}
+
+/* --- (MANTENHA O RESTO DO SEU CSS DE ABAS E CARDS AQUI ABAIXO) --- */
+/* Menu Lateral (Nav Pills) */
+.nav-pills .nav-link {
+    /* ... (seu css anterior) ... */
+    background-color: #fff;
+    border: none; /* Remove borda para ficar mais clean */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+.dashboard-card {
+    /* ... (seu css anterior) ... */
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+}

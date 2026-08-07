@@ -1,0 +1,19 @@
+/* Estilo da janela flutuante */
+#janela-instrucoes {
+    position: fixed;
+    bottom: 30px; /* Começa no canto inferior direito */
+    right: 30px;
+    width: 320px;
+    z-index: 9999;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Muda o cursor para indicar que é arrastável */
+#janela-header {
+    cursor: grab;
+}
+#janela-header:active {
+    cursor: grabbing;
+}

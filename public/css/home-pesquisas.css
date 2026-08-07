@@ -1,0 +1,451 @@
+body {
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2C3E50;
+  border-bottom: 2px solid #2196F3;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link#sidebarToggle {
+  color: white;
+  z-index: 1002;
+}
+
+/* Estilo da Sidebar */
+.custom-sidebar {
+  background: linear-gradient(to bottom, #4CAF50, #008CBA);
+  color: #fff;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.custom-sidebar.open {
+  right: 0;
+}
+
+.custom-sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.custom-sidebar ul.components {
+  padding: 0;
+}
+
+.custom-sidebar ul li {
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+.custom-sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-sidebar ul li.active a {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.custom-sidebar ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.custom-sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}
+
+/* Main content */
+main {
+  margin: 50px auto;
+  padding: 20px;
+  width: 50%;
+  position: relative;
+  left: 0;
+}
+
+.table-bordered {
+  border: 1px solid #4CAF50;
+  color: #ffffff;
+}
+
+.table-bordered th {
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table-bordered td {
+  background-color: #2C3E50;
+  color: #ffffff;
+}
+
+.table-bordered tr:nth-child(even) td {
+  background-color: #3b4d61;
+}
+
+.table-bordered th, .table-bordered td {
+  padding: 10px;
+  text-align: center;
+  border-color: #4CAF50;
+}
+
+.table-bordered tr:hover {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+/* Estilo para o título da seção */
+.col-md-4 h2 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Estilos exclusivos para a seção de Comentários */
+.comentarios-section h2 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.comentarios-section h3 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo exclusivo para a tabela de Comentários */
+.comentarios-section .comentarios-table {
+  border: 1px solid #4CAF50;
+  color: #ffffff;
+}
+
+.comentarios-section .comentarios-table th {
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.comentarios-section .comentarios-table td {
+  background-color: #2C3E50;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.comentarios-section .comentarios-table tr:nth-child(even) td {
+  background-color: #3b4d61;
+}
+
+.comentarios-section .comentarios-table tr:hover {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+/* Alinhamento centralizado para cabeçalhos e células da tabela */
+.comentarios-section .comentarios-table th, 
+.comentarios-section .comentarios-table td {
+  text-align: center;
+}
+
+/* Estilo exclusivo para a coluna de status */
+.comentarios-section .comentarios-table td.status-column {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+/* Estilo para mensagens de aviso */
+.comentarios-section .no-comments-message {
+  color: #ffffff;
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1{
+  color: #000;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container .form-item {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Modal */
+.custom-modal-content {
+  background-color: #fff;
+  color: #000;
+}
+
+.custom-modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.custom-modal-title {
+  color: #343a40;
+}
+
+.custom-modal-close {
+  color: #000;
+}
+
+.custom-modal-body {
+  background-color: #fff;
+  color: #000;
+}
+
+.custom-label {
+  color: #000;
+}
+
+.custom-textarea {
+  background-color: #fff;
+  color: #000;
+}
+
+.custom-submit-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.custom-submit-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Estilos para checkboxes */
+.form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.form-check-label {
+  margin-left: 0.5rem;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Tornar listas de checkboxes roláveis */
+.scrollable-checkbox-list {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+
+@media (max-width: 768px) {
+  .custom-item ul li.custom-item-detail {
+    flex: 1 1 100%;
+  }
+}
+
+/* Estilização para as abas */
+.nav-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff #007bff #ddd;
+}
+
+.nav-tabs .nav-link {
+  color: #000000;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef #ddd;
+}
+
+.tab-content {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #f9f9f9;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+/* Estilo geral do formulário */
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+  color: #000;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title{
+  color: #000;
+}
+
+/* Estilo para os rótulos dos campos */
+form label {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Estilo para os campos de entrada de texto */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo ao focar nos campos */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo para os botões */
+form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+
+form .error-message {
+  color: #d9534f;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+
+form .success-message {
+  color: #5cb85c;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+
+form input[required],
+form select[required],
+form textarea[required] {
+  border-left: 4px solid #d9534f;
+}
+
+
+form label::after {
+  content: " *";
+  color: #d9534f;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  main {
+    margin-right: 0;
+  }
+
+  .custom-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .custom-sidebar.open {
+    right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-link {
+    font-size: 14px;
+  }
+
+  .custom-sidebar ul li {
+    font-size: 16px;
+  }
+
+  .custom-item ul li.custom-item-detail {
+    flex: 1 1 100%;
+  }
+
+  form button {
+    width: 100%;
+    padding: 15px;
+  }
+}

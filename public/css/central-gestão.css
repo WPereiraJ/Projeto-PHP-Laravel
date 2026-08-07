@@ -1,0 +1,32 @@
+/* Fundo degradê igual à imagem */
+body {
+    background: linear-gradient(135deg, #42b883 0%, #35495e 100%); /* Verde para Azulado */
+    background-attachment: fixed; /* O fundo não rola */
+    min-height: 100vh;
+}
+
+/* Ajuste dos títulos das colunas */
+.section-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Cards brancos para os formulários */
+.custom-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Ajuste das abas para ficarem bonitas no fundo colorido */
+.nav-tabs .nav-link {
+    color: #eee;
+    font-weight: 500;
+}
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}

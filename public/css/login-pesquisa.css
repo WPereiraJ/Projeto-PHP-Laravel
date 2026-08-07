@@ -1,0 +1,136 @@
+/* --- FUNDO E ESTRUTURA --- */
+.login-section {
+    background: linear-gradient(135deg, #00b09b, #96c93d); /* Degradê Moderno (Verde Tech) */
+    min-height: 85vh; /* Altura ideal respeitando Header/Footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* --- O CARD (CARTÃO) --- */
+.login-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Sombra suave e elegante */
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px; /* Largura máxima confortável */
+    position: relative;
+    top: 0;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+/* --- LOGO --- */
+.login-logo {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- INPUTS PERSONALIZADOS --- */
+.custom-input-group {
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.custom-input-group:focus-within {
+    border-color: #00b09b; /* Cor do foco */
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 176, 155, 0.1);
+}
+
+.input-icon {
+    color: #a0a0a0;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.form-control-clean {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control-clean::placeholder {
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+/* --- BOTÃO --- */
+.btn-login-modern {
+    background: #00b09b;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 176, 155, 0.3);
+}
+
+.btn-login-modern:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 176, 155, 0.4);
+    color: #fff;
+}
+
+/* --- LINK --- */
+.login-footer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+.link-cadastro {
+    color: #00b09b;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link-cadastro:hover {
+    color: #008a7a;
+    text-decoration: underline;
+}
+
+/* --- ANIMAÇÃO DE ENTRADA (Slide Up + Fade) --- */
+.fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

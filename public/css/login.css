@@ -1,0 +1,125 @@
+/* Reset e Fonte */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  /* Fundo moderno com imagem ou gradiente rico */
+  background: url('https://images.unsplash.com/photo-1625246333195-5848c428218e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+  height: 100vh;
+  overflow: hidden;
+  /* Evita barras de rolagem desnecessárias */
+}
+
+/* Camada escura sobre a imagem para dar leitura */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 80, 40, 0.85), rgba(33, 150, 243, 0.75));
+  z-index: 0;
+}
+
+/* Container Principal que centraliza o formulário */
+.login-wrapper {
+  position: relative;
+  /* Importante para o z-index */
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Botão de Voltar Flutuante */
+.btn-back-floating {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.btn-back-floating:hover {
+  background: white;
+  color: #2d8a4e;
+  text-decoration: none;
+  transform: translateX(-5px);
+}
+
+/* Caixa de Login */
+.login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  border-top: 5px solid #4CAF50;
+  /* Detalhe verde no topo */
+}
+
+/* Logo */
+.logo {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto 30px;
+  height: auto;
+}
+
+/* Inputs */
+.form-control {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 20px 15px;
+  /* Mais altura para toque */
+  height: auto;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  background-color: white;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 50px;
+  padding: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+/* Links */
+a {
+  color: #2196F3;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #1976D2;
+  text-decoration: none;
+}

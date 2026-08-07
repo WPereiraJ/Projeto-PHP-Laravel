@@ -1,0 +1,28 @@
+/* Estilo para a lista com rolagem (scroll) */
+.scrollable-checkbox-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+/* Estilo para os labels personalizados */
+.custom-label {
+    font-weight: 600;
+    color: #495057;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Ajuste visual para os itens da lista */
+.usuario-item, .trabalho-item {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.usuario-item:last-child, .trabalho-item:last-child {
+    border-bottom: none;
+}

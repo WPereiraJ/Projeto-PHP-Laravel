@@ -1,0 +1,347 @@
+/* =========================================
+   1. VARIÁVEIS GLOBAIS (THEME CONFIG)
+   ========================================= */
+:root {
+    /* Paleta de Cores */
+    --primary-color: #007bff;       /* Azul Principal */
+    --secondary-color: #6c757d;     /* Cinza Secundário */
+    --success-color: #28a745;       /* Verde Sucesso */
+    --danger-color: #dc3545;        /* Vermelho Erro */
+    --warning-color: #ffc107;       /* Amarelo Aviso */
+    --info-color: #17a2b8;          /* Azul Ciano */
+    
+    --dark-bg: #2c3e50;             /* Fundo Escuro */
+    --light-bg: #f8f9fa;            /* Fundo Claro */
+    --text-color: #333333;          /* Texto Principal */
+    --white: #ffffff;
+
+    /* Gradientes */
+    --gradient-body: linear-gradient(135deg, #42b883 0%, #35495e 100%);
+    --gradient-sidebar: linear-gradient(to bottom, #2c3e50, #000000);
+
+    /* Espaçamentos e Bordas */
+    --sidebar-width: 250px;
+    --border-radius: 8px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   2. RESET E ESTRUTURA BÁSICA
+   ========================================= */
+body {
+    background: var(--gradient-body);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
+
+/* Garante que o conteúdo principal ocupe o espaço restante */
+main {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+}
+
+/* Links globais */
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* =========================================
+   3. NAVBAR E SIDEBAR
+   ========================================= */
+.navbar {
+    background-color: rgba(44, 62, 80, 0.95); /* Semi-transparente */
+    border-bottom: 2px solid var(--success-color);
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-brand, 
+.navbar .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+}
+
+.nav-link#sidebarToggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Sidebar Customizada */
+.custom-sidebar {
+    background: var(--gradient-sidebar);
+    color: var(--white);
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: calc(var(--sidebar-width) * -1); /* Esconde na direita */
+    transition: right 0.3s ease;
+    z-index: 1050; /* Acima da navbar */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    overflow-y: auto;
+}
+
+.custom-sidebar.open {
+    right: 0;
+}
+
+.custom-sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.custom-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-sidebar ul li a {
+    color: rgba(255,255,255,0.8);
+    display: block;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+
+.custom-sidebar ul li a:hover,
+.custom-sidebar ul li.active a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transform: translateX(-5px); /* Pequena animação */
+}
+
+/* Overlay para fechar sidebar no mobile (Opcional, mas recomendado) */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+}
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* =========================================
+   4. FORMULÁRIOS (PADRÃO CLEAN CODE)
+   ========================================= */
+form {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid #e1e4e8;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Asterisco de obrigatório */
+.form-group label span.text-danger,
+label.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: 0;
+}
+
+/* Textarea fixo */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkboxes e Radios */
+.form-check {
+    margin-bottom: 0.5rem;
+}
+.form-check-label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Lista de Checkboxes com Scroll */
+.scrollable-checkbox-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Botões */
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0069d9; /* Escurece 10% */
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   5. COMPONENTES (TABS, CARDS, MODALS)
+   ========================================= */
+
+/* Nav Tabs Modernas */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #555;
+    background: transparent;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-color: transparent;
+}
+
+.tab-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #dee2e6;
+    border-top: none;
+}
+
+/* Cards Personalizados */
+.custom-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Modais */
+.modal-content {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* =========================================
+   6. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 992px) {
+    /* Ajustes para Tablets */
+    main {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para Mobile */
+    
+    /* Navbar compacta */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    /* Sidebar ocupa tela toda no mobile */
+    .custom-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    /* Tabelas responsivas forçadas */
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    /* Ajuste de formulários */
+    form {
+        padding: 15px;
+    }
+}
+
+/* =========================================
+   7. CORREÇÃO ESPECÍFICA PARA SELECTS
+   ========================================= */
+select.form-control {
+    /* "auto" permite que o select cresça para caber o texto + padding */
+    height: auto !important; 
+    
+    /* Ajuste fino do espaçamento vertical para centralizar o texto */
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    
+    /* Garante altura de linha legível */
+    line-height: 1.5 !important;
+    
+    /* Remove aparência nativa bugada em alguns navegadores e aplica estilo padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}

@@ -1,0 +1,85 @@
+/* Estilos Corporativos para E-mails */
+.wrapper {
+    background-color: #f8f9fa;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #004a80;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content {
+    padding: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.welcome-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.credentials-box {
+    background-color: #f1f4f7;
+    border-left: 4px solid #004a80;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.credentials-box table {
+    width: 100%;
+}
+
+.credentials-box td {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    width: 120px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #28a745;
+    color: #ffffff !important;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    background-color: #f1f1f1;
+}
